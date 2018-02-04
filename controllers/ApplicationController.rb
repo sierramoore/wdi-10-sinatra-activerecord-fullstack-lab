@@ -7,12 +7,12 @@ class ApplicationController < Sinatra::Base
   #     # :database => ''
   # )
   #
-  # set :views, File.expand_path('../../views', __FILE__)
-  # set :public_dir, File.expand_path('../../public', __FILE__)
+  set :views, File.expand_path('../../views', __FILE__)
+  set :public_dir, File.expand_path('../../public', __FILE__)
 
 
   get '/' do
-    "Home Route"
+    erb :index
   end
 
   not_found do
