@@ -12,7 +12,8 @@ class ApplicationController < Sinatra::Base
 
 
   get '/' do
-    erb :index
+    @page = "hello"
+    erb :hello
   end
 
   not_found do
