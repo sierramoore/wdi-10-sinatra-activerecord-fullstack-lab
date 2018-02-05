@@ -7,8 +7,8 @@ class ApplicationController < Sinatra::Base
       :database => 'item'
   )
 
-  set :views, File.expand_path('../../views', __FILE__)
-  set :public_dir, File.expand_path('../../public', __FILE__)
+  set :views, File.expand_path('../views', File.dirname(__FILE__))
+  set :public_dir, File.expand_path('../public', File.dirname(__FILE__))
 
 
   get '/' do
